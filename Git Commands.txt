@@ -90,3 +90,6 @@ git pull -h
 git push -h
 
 [TOPICS --]
+
+[git commit]
+git commit -F ~/Documents/Github/Git_log.txt
