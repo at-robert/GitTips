@@ -91,5 +91,8 @@ git push -h
 
 [TOPICS --]
 
-[git commit]
-git commit -F ~/Documents/Github/Git_log.txt
+-[git commit]
+-git commit -F ~/Documents/Github/Git_log.txt
+
+git checkout -f
+-f, --force           force checkout (throw away local modifications)

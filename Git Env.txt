@@ -53,6 +53,7 @@ $git clone https://github.com/at-robert/GitTips.git
 [TIPS]
 git@github.com:at-robert/GitTips.git
 
+
 …or create a new repository on the command line
 echo "# GitTips" >> README.md
 git init
@@ -64,3 +65,11 @@ git push -u origin master
 …or push an existing repository from the command line
 git remote add origin https://github.com/at-robert/GitTips.git
 git push -u origin master
+
+
+[Pull]
+git pull -u origin master
+
+[Git Hub respository list]
+https://github.com/at-robert/GitTips.git
+https://github.com/at-robert/RaspPython.git
