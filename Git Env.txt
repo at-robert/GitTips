@@ -29,8 +29,10 @@ If you clone with SSH, you must generate SSH keys on each computer you use to pu
 
 [TIPS]
 * To copy git files from the Github.com
-$git clone https://github.com/at-robert/TestFolder.git
-$git clone https://github.com/at-robert/GitTips.git
+git clone https://github.com/at-robert/TestFolder.git
+git clone https://github.com/at-robert/GitTips.git
+git clone https://github.com/at-robert/ATP_FCST.git
+git clone https://github.com/at-robert/LinuxScript.git
 
 [TOPICS]
 * How to setup Github to ignore some certain file types which should not be uploaded. 
@@ -64,3 +66,5 @@ git push -u origin master
 …or push an existing repository from the command line
 git remote add origin https://github.com/at-robert/GitTips.git
 git push -u origin master
+
+git commit -m "[refactor] - To add an ignore list and move some files to the specific folder"
