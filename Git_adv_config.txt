@@ -1,0 +1,16 @@
+[Advance Git Config]
+System Level:
+gitconfig location:
+Mac OS X:
+/usr/local/git/etc/gitconfig
+Linux: /etc/gitconfig
+
+
+
+User Level:
+Mac OS X, Linux:
+~/.gitconfig
+
+--global
+
+Storage Level:
