@@ -96,3 +96,69 @@ git push -h
 
 git checkout -f
 -f, --force           force checkout (throw away local modifications)
+
+
+[Git log 基本介紹]
+
+印出來的結果其實又臭又長，實在是不太實用...
+
+別擔心
+我們可以使用 --pretty=format 將 log的內容做一下整理
+
+$ git log --pretty=format:"%h - %an, %ar : %s"
+其中 %h, %an , %ar , %s
+
+分別代表git log中不同的欄位值
+
+選項	選項的說明
+%H	該更新的SHA1雜湊值
+%h	該更新的簡短SHA1雜湊值
+%T	存放該更新的根目錄的Tree物件的SHA1雜湊值
+%t	存放該更新的根目錄的Tree物件的簡短SHA1雜湊值
+%P	該更新的父更新的SHA1雜湊值
+%p	該更新的父更新的簡短SHA1雜湊值
+%an	作者名字
+%ae	作者電子郵件
+%ad	作者的日期 (格式依據 date 選項而不同)
+%ar	相對於目前時間的作者的日期
+%cn	提交者的名字
+%ce	提交者的電子郵件
+%cd	提交的日期
+%cr	相對於目前時間的提交的日期
+%s	標題
+git log 後面可以接的參數有哪些呢？
+
+選項	選項的說明
+-p	顯示每個更新與上一個的差異。
+--word-diff	使用 word diff 格式顯示 patch 內容。
+--stat	顯示每個更新更動的檔案的統計及摘要資訊。
+--shortstat	僅顯示--stat提供的的訊息中關於更動、插入、刪除的文字。
+--name-only	在更新的訊息後方顯示更動的檔案列表。
+--name-status	顯示新增、更動、刪除的檔案列表。
+--abbrev-commit	僅顯示SHA1查核值的前幾位數，而不是顯示全部的40位數。
+--relative-date	以相對於目前時間方式顯示日期（例如：「2 weeks ago」），而不是完整的日期格式。
+--graph	以 ASCII 在 log 輸出旁邊畫出分支的分歧及合併。
+--pretty	以其它格式顯示更新。 可用的選項包含oneline、short、full、fuller及可自訂格式的format。
+--oneline	--pretty=oneline --abbrev-commit 的簡短用法。
+-(n)	僅顯示最後 n 個更新
+--since, --after	列出特定日期後的更新。
+--until, --before	列出特定日期前的更新。
+--author	列出作者名稱符合指定字串的更新。
+--committer	列出提交者名稱符合指定字串的更新。
+我們可以透過上面的參數值，來設定git lob要顯示的格式和範圍。 
+更多參數說明
+而參數不止上面這些項目而已，還可以透過awk,grep,sed 指令去做更多工作
+若想知道更多的話，可以在command line上面打
+
+man git-log
+回到正題，而我需要的功能是找出不同天由我寫的commit，並計算數量
+
+寫法如下
+
+git log --pretty=format:"%ad " --date=short --author=james | sort -u | awk '{print $1,a++}' 
+上面的寫法就是 要求 git log 列出有 james commit 的 日期，並計算有幾個日期
+
+完畢～
+
+計算結果有33天
+任務完成
