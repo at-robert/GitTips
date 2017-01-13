@@ -19,7 +19,7 @@ git config --global alias.ci commit
 git config --global alias.st status
 git config --global alias.cm "commit -m"
 git config --global alias.tree 'log --graph --decorate --pretty=oneline --abbrev-commit'
-git config --global alias.cml 'commit -F'
+git config --global alias.cf 'commit -F'
 git config --global alias.slog 'log --pretty=format:"%h - %an, %ar : %s"'
 git config --global alias.fs '! git fetch & git status'
 
