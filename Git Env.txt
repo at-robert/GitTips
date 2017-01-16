@@ -36,25 +36,26 @@ git clone https://github.com/at-robert/TestFolder.git
 git clone https://github.com/at-robert/GitTips.git
 git clone https://github.com/at-robert/ATP_FCST.git
 git clone https://github.com/at-robert/LinuxScript.git
+git clone https://github.com/at-robert/RaspPython.git
 
 [TOPICS]
 * How to setup Github to ignore some certain file types which should not be uploaded. 
  a. In the terminal interface, switching the Git working folder
  b. To create a file ".gitignore" if it doesn't exist yet.
  c. To edit this file to add the following content to specify what type of file you don't git to manage them
-  .DS_Store
-  ._.DS_Store
-  cache/
-  log/*.log
-  tmp/
-  *.tmp
-  *.swp
-  *.o
-  *.so
-  *.a
-  *.exe
-  *.bin
-  *~
+.DS_Store
+._.DS_Store
+cache/
+log/*.log
+tmp/
+*.tmp
+*.swp
+*.o
+*.so
+*.a
+*.exe
+*.bin
+*~
 [TOPICS --]
 
 [TIPS]
@@ -84,3 +85,6 @@ git pull -u origin master
 https://github.com/at-robert/GitTips.git
 https://github.com/at-robert/RaspPython.git
 https://github.com/at-robert/LinuxScript.git
+
+[BitBucket]
+https://at-robert@bitbucket.org/at-robert/swiss_knife.git
