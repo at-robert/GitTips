@@ -88,3 +88,6 @@ https://github.com/at-robert/LinuxScript.git
 
 [BitBucket]
 https://at-robert@bitbucket.org/at-robert/swiss_knife.git
+
+[Study and pratice]
+https://try.github.io/levels/1/challenges/1
