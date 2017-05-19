@@ -126,6 +126,14 @@ ssh-keygen -t rsa -b 4096 -C "atttrobert@gmail.com"
 git clone git@github.com:at-robert/RaspPython.git
 git clone git@bitbucket.org:at-robert/swiss_knife.git
 
-[To resolve conflict]
-When you have a conflict, you can initiate your merge sessions from the command line typing "git mergetool" or from a visual tool
-$ git mergetool
+[Conflict Test]
+<<<<<<< HEAD
+adxqwesda
+asdqwedas
+asdasd
+=======
+adsasd
+asdasdas
+xadaeqew
+asdasdas
+>>>>>>> b1b24f538d3ec768b96f11b3bf3c56d79438efa8
