@@ -29,6 +29,8 @@ $git config --global user.name "at-robert"
 git config --global user.name "robert.lo"
 git config --global user.email "robert.lo@amtran.com.tw"
 
+git config --global mergetool.keepBackup false
+
 
 3. Tell Git the email address that will be associated with your Git commits. 
 The email you specify should be the same one found in your email settings. 
@@ -129,3 +131,19 @@ git clone git@bitbucket.org:at-robert/swiss_knife.git
 [To resolve conflict]
 When you have a conflict, you can initiate your merge sessions from the command line typing "git mergetool" or from a visual tool
 $ git mergetool
+
+[To export source code from git]
+
+Probably the simplest way to achieve this is with git archive. If you really need just the expanded tree you can do something like this.
+$ git archive master | tar -x -C ~/Downloads/GitAriche
+
+Most of the time that I need to 'export' something from git, I want a compressed archive in any case so I do something like this.
+$ git archive master | bzip2 >source-tree.tar.bz2
+
+ZIP archive:
+$ git archive --format zip --output /full/path/to/zipfile.zip master 
+
+git help archive for more details, it's quite flexible.
+
+Note: If you are interested in exporting the index, the command is
+git checkout-index -a -f --prefix=/destination/path/
