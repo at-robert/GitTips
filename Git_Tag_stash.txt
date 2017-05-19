@@ -1,0 +1,32 @@
+﻿[Git Tag]
+查詢標籤
+git tag
+ 
+查詢詳細標籤
+git tag n
+ 
+刪除標籤
+git tag -d 標籤名稱
+ 
+新增輕量標籤
+git tag 標籤名稱
+ 
+新增標示標籤
+git tag -am "備註內容" 標籤名稱
+
+[Git Stash]
+
+暫時儲存當前目錄
+git stash
+ 
+瀏覽 stash 列表
+git stash list 
+ 
+還原暫存
+git stash pop
+ 
+清除最新暫存
+git stash drop
+ 
+清除全部暫存
+git stash clear

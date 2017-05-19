@@ -55,12 +55,14 @@ git clone https://github.com/at-robert/TestFolder.git
 git clone https://github.com/at-robert/GitTips.git
 git clone https://github.com/at-robert/ATP_FCST.git
 git clone https://github.com/at-robert/LinuxScript.git
+git clone https://github.com/at-robert/RaspPython.git
 
 [TOPICS]
 * How to setup Github to ignore some certain file types which should not be uploaded. 
  a. In the terminal interface, switching the Git working folder
  b. To create a file ".gitignore" if it doesn't exist yet.
  c. To edit this file to add the following content to specify what type of file you don't git to manage them
+
   cache/
   log/*.log
   tmp/
@@ -74,6 +76,7 @@ git clone https://github.com/at-robert/LinuxScript.git
   *~
   .DS_Store
   ._.DS_Store
+
 [TOPICS --]
 
 [TIPS]
@@ -103,3 +106,23 @@ git pull -u origin master
 https://github.com/at-robert/GitTips.git
 https://github.com/at-robert/RaspPython.git
 https://github.com/at-robert/LinuxScript.git
+https://github.com/at-robert/PyCrawler.git
+
+[BitBucket]
+https://at-robert@bitbucket.org/at-robert/swiss_knife.git
+
+[heroku]
+https://arditstock.herokuapp.com/ | https://git.heroku.com/arditstock.git
+
+[Study and pratice]
+https://try.github.io/levels/1/challenges/1
+
+[SSH key]
+cd ~
+mkdir .ssh
+cd ~/.ssh 
+ssh-keygen -t rsa -b 4096 -C "atttrobert@gmail.com"
+
+git clone git@github.com:at-robert/RaspPython.git
+git clone git@bitbucket.org:at-robert/swiss_knife.git
+
