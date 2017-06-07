@@ -115,6 +115,7 @@ https://at-robert@bitbucket.org/at-robert/swiss_knife.git
 
 [heroku]
 https://arditstock.herokuapp.com/ | https://git.heroku.com/arditstock.git
+https://datacollec.herokuapp.com/ | https://git.heroku.com/datacollec.git
 
 [Study and pratice]
 https://try.github.io/levels/1/challenges/1
