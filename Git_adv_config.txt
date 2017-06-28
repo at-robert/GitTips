@@ -65,3 +65,31 @@ error: failed to push some refs to 'git@192.168.1.X:/var/git.server/.../web'
 如果使用了git init初始化，则远程仓库的目录下，也包含work tree，当本地仓库向远程仓库push时,
 如果远程仓库正在push的分支上（如果当时不在push的分支，就没有问题）, 那么push后的结果不会反应在work tree上,
 也即在远程仓库的目录下对应的文件还是之前的内容，必须得使用git reset --hard才能看到push后的内容.
+
+
+[Install and Upgrade Git]
+
+Check version
+$ git --version
+Backup (or remove) Apple git (Optional)
+$ sudo mv /usr/bin/git /usr/bin/git-apple
+
+Install Homebrew if you didn’t have
+$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+Or update if you already have
+$ brew update && brew upgrade
+
+Install Git with Homebrew
+$ brew install git
+
+Symbolic link
+$ brew link --force git
+
+Close Terminal and reopen then check version
+$ git --version
+You should see…
+git version 2.8.2
+Nice! We’re safe now! And next time you can just…
+
+$ brew update && brew upgrade

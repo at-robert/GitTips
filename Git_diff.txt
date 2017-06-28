@@ -47,3 +47,6 @@ git diff HEAD^ HEAD => HEAD^ vs HEAD
 * git diff --cached
 * git diff --staged
 * git diff HEAD^ HEAD
+
+[ATOM hotkey]
+alt+cmd+g : To the next Git diff
