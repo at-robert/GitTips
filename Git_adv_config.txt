@@ -24,6 +24,7 @@ git config --global alias.slog 'log --pretty=format:"%h - %an, %ar : %s"'
 git config --global alias.fs '! git fetch & git status'
 git config --global alias.mt mergetool
 git config --global alias.am '! git archive master | tar -x -C'
+git config --global alias.cot "checkout --track"
 
 [Reference]
 https://github.com/jesuswasrasta/GitEnvironment
@@ -93,3 +94,34 @@ git version 2.8.2
 Nice! We’re safe now! And next time you can just…
 
 $ brew update && brew upgrade
+
+
+
+跟蹤遠端分支
+從遠端分支 checkout 出來的本地分支，稱為 跟蹤分支 (tracking branch)。跟蹤分支是一種和某個遠端分支有直接聯繫的本地分支。
+在跟蹤分支裡輸入 git push，Git 會自行推斷應該向哪個伺服器的哪個分支推送資料。同樣，在這些分支裡運行 git pull 會獲取所有遠端索引，並把它們的資料都合併到本地分支中來。
+
+在克隆倉庫時，Git 通常會自動創建一個名為 master 的分支來跟蹤 origin/master。
+這正是 git push 和 git pull 一開始就能正常工作的原因。當然，你可以隨心所欲地設定為其它跟蹤分支，比如 origin 上除了 master 之外的其它分支。
+剛才我們已經看到了這樣的一個例子：git checkout -b [分支名] [遠端名]/[分支名]。如果你有 1.6.2 以上版本的 Git，還可以用 --track 選項簡化：
+
+$ git checkout --track origin/serverfix
+Branch serverfix set up to track remote branch serverfix from origin.
+Switched to a new branch 'serverfix'
+要為本地分支設定不同于遠端分支的名字，只需在第一個版本的命令裡換個名字：
+
+$ git checkout -b sf origin/serverfix
+Branch sf set up to track remote branch serverfix from origin.
+Switched to a new branch 'sf'
+現在你的本地分支 sf 會自動將推送和抓取資料的位置定位到 origin/serverfix 了。
+
+刪除遠端分支
+如果不再需要某個遠端分支了，比如搞定了某個特性並把它合併進了遠端的 master 分支（或任何其他存放穩定代碼的分支）
+，可以用這個非常無厘頭的語法來刪除它：git push [遠程名] :[分支名]。如果想在伺服器上刪除 serverfix 分支，運行下面的命令：
+
+$ git push origin :serverfix
+To git@github.com:schacon/simplegit.git
+ - [deleted]         serverfix
+咚！伺服器上的分支沒了。你最好特別留心這一頁，因為你一定會用到那個命令，而且你很可能會忘掉它的語法。
+有種方便記憶這條命令的方法：記住我們不久前見過的 git push [遠端名] [本地分支]:[遠端分支] 語法，如果省略 [本地分支]，
+那就等於是在說“在這裡提取空白然後把它變成[遠端分支]”。

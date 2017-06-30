@@ -77,7 +77,19 @@ mv         Move or rename a file, a directory, or a symlink
 pull       Fetch from and merge with another repository or a local branch
 push       Update remote refs along with associated objects
 rebase     Forward-port local commits to the updated upstream head
+
+=====================================================
 reset      Reset current HEAD to the specified state
+
+git reset 砍掉 commit 重來，但是修改的程式還是留在 working tree。例如：
+git reset HEAD^ 就會回到前一版本(一個^表示是前一版)，並把其中的 changes 繼續留在 working tree 中。
+適合發現前一次 commit 有問題或是想要修改 commit log，可以修改後再重新 commit。
+git reset 如果加上 –soft 參數則會把 changes 直接加到 staging area。
+加上 –hard 參數表示不留 staging area 也不留 working tree(完全刪除任何修改記錄)，例如：
+git reset –hard HEAD^ 則會完全抹掉前一次的 commit。
+=====================================================
+
+
 rm         Remove files from the working tree and from the index
 show       Show various types of objects
 status     Show the working tree status

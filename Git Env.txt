@@ -109,6 +109,7 @@ https://github.com/at-robert/GitTips.git
 https://github.com/at-robert/RaspPython.git
 https://github.com/at-robert/LinuxScript.git
 https://github.com/at-robert/PyCrawler.git
+https://github.com/at-robert/TestFolder.git
 
 [BitBucket]
 https://at-robert@bitbucket.org/at-robert/swiss_knife.git

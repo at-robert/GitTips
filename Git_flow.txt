@@ -1,0 +1,77 @@
+﻿[Git flow]
+Web link: 
+http://www.takobear.tw/2014/02/15/bear-git-flow-sourcetreegit-flow/
+
+
+一個Git flow，其中的內容大致可以區分如下：
+
+主要分支
+master：釋出的版本，只從 release 與 hotfix merge  回來，不直接在上面 commit 變更。
+develop：開發中的版本，預設在這 branch 上，開發修改功能都從這分支出去。
+支援性分支
+feature branches：從 develop 分支出來，當功能開發修改完成後 merge 回 develop
+release branches：從 develop 分支出來，是準備釋出的版本，只修改版本號與 bug，完成後 merge 回 develop 與 master，並在 master 標上版本號的 tag
+hotfix branches：從 master 分支出來，主要是處理已釋出版本需要立即修改的錯誤，完成後 merge 回 develop 與 master，並在 master 標上版本號的 tag
+在本篇教學中，採用 SourceTree 這套 git gui 工具，因為它有整合了git flow的功能，很方便。
+
+如果你超愛指令，但又不想打太多，你可以參考 Git-flow 使用笔记 安裝git-flow工具操作。
+
+本篇教學範例將以圖說的方式，列出以下步驟，並在部分步驟中列出相對應的指令以供參考：
+
+STEPS:
+a. After cloning the project, there is only master in the local working repository so you need to track the remote develop branch
+$ git checkout --track origin develop
+
+b. To type the following command to check the current repository status:
+$ git branch -a
+
+初始化專案的 git flow 設定
+參考指令:
+$ git checkout -b develop master
+# To branch from the master and then create a develop branch
+
+開發新功能(feature)
+參考指令：
+$ git checkout -b feature/f1 develop
+# To create a feature branch f1
+
+參考指令：
+$ git checkout develop
+$ git merge --no-ff feature/f1
+$ git branch -d feature/f1
+# To merge the feature f1 back to develop branch and then delete feature f1
+
+釋出專案(release)
+參考指令：
+$ git checkout -b release/v0.1.0 develop
+# To create a release branch v0.1.0 from the develop branch
+
+參考指令：
+$ git checkout master
+$ git merge --no-ff release/v0.1.0
+$ 
+$ git tag -a v0.1.0
+$ 
+$ git checkout develop
+$ git merge --no-ff release/v0.1.0
+$ 
+$ git branch -d release/v0.1.0
+# To merge release v0.1.0 back to develop and master branch and then delete release v0.1.0 branch
+
+緊急上版(hotfix)
+參考指令：
+$ git checkout -b hotfix/v0.1.1 master
+# To create a hotfix branch from the master
+
+參考指令：
+
+$ git checkout master
+$ git merge --no-ff hotfix/v0.1.1
+$ 
+$ git tag -a v0.1.1
+$ 
+$ git checkout develop
+$ git merge --no-ff -b hotfix/v0.1.1
+$ 
+$ git branch -d hotfix/v0.1.1
+# To merge hotfix v0.1.1 back to develop and master branch and tag v0.1.1 on the current master and then delete hotfix v0.1.1 branch
