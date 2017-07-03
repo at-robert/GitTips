@@ -109,6 +109,8 @@ git push -h
 git checkout -f
 -f, --force           force checkout (throw away local modifications)
 
+[To upload the new branch onto the remote repository]
+git push --set-upstream origin f2
 
 [Git log 基本介紹]
 

@@ -15,6 +15,8 @@ Storage Level:
 [Alias]
 git config --global alias.co checkout
 git config --global alias.br branch
+git config --global alias.bra "branch -a"
+git config --global alias.brr "branch -r"
 git config --global alias.ci commit
 git config --global alias.st status
 git config --global alias.cm "commit -m"
@@ -25,6 +27,7 @@ git config --global alias.fs '! git fetch & git status'
 git config --global alias.mt mergetool
 git config --global alias.am '! git archive master | tar -x -C'
 git config --global alias.cot "checkout --track"
+git config --global alias.psup "push --set-upstream origin"
 
 [Reference]
 https://github.com/jesuswasrasta/GitEnvironment
