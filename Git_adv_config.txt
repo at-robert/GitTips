@@ -28,6 +28,10 @@ git config --global alias.mt mergetool
 git config --global alias.am '! git archive master | tar -x -C'
 git config --global alias.cot "checkout --track"
 git config --global alias.psup "push --set-upstream origin"
+git config --global alias.unstage 'reset HEAD --'
+git config --global alias.undo 'reset --soft HEAD~1'
+git config --global alias.last 'log -1 HEAD'
+git config --global alias.difflast 'diff --cached HEAD^'
 
 [Reference]
 https://github.com/jesuswasrasta/GitEnvironment
