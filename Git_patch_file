@@ -1,0 +1,89 @@
+[How to Create and Apply Patches in GIT using diff and apply Command]
+web: http://www.thegeekstuff.com/2014/03/git-patch-create-and-apply/
+
+On master, we only have file1:
+
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+$ ls
+file1
+While on experimental, we have all 3 files:
+
+$ git status
+On branch experimental
+nothing to commit, working directory clean
+
+$ ls
+file1 file2 file3
+In this tutorial, we’ll explain how to create a patch of the changes on the experimental branch and apply them to the master.
+
+[Creating the GIT Patch]
+
+We will use the git diff command to create the diff output, then redirect it into a file. The form of the diff command we will use is as follows:
+
+$ git diff from-commit to-commit > output-file
+
+where:
+from-commit – the point at which we want the patch to start. (In our case, the point at which experimental diverges from master)
+to-commit – the patch will span the changes up to and including this point. (In our case, the most recent commit of experimental)
+output-file – the patch will be written here
+Note: if either from-commit or to-commit are omitted, they will be assumed to be HEAD
+
+We specify the two commits by their unique hash. Generally, you only have to specify enough of the commit hash to ensure its uniqueness (4 characters will probably do it).
+
+$ git diff 04a2 b36f > patch.diff
+
+$ ls
+patch.diff file1      file2      file3
+As you see from the above output, the patch file has been created.
+
+In this special case, where we want to create a patch of the entire branch, we can let GIT do some of the work for us. We can let GIT determine the point at which our experimental branch diverged from the master branch using the git merge-base command:
+
+git diff $(git merge-base <public branch> <experimental branch>) > <output file>
+git merge-base will determine the most recent common commit between 2 branches. Notice also how this time we have omitted . It will be defaulted to HEAD, and since the experimental branch checked out, HEAD will be the most recent commit of the experimental branch.
+
+$ git diff $(git merge-base master experimental) > anotherPatch.diff
+
+$ ls
+anotherPatch.diff patch.diff  file1  file2  file3
+Again, the patch file has been created. These patch files are identical.
+
+
+[Applying the GIT Patch]
+
+Once the patch file has been made, applying it is easy. Make sure that the branch you have checked out is the one that you want to apply the patch to (master in our case). Then you can apply the patch using the git apply command: git apply 
+
+$ git status
+On branch master
+... (rest of output omitted) ...
+
+$ ls
+anotherPatch.diff patch.diff  file1
+
+$ git apply patch.diff
+
+$ ls
+anotherPatch.diff patch.diff  file1  file2  file3
+The changes from the experimental branch have now been replicated on master.
+
+Warning: Although applying a patch in this way will exactly replicate content, no commit history will be replicated. This means that even if the patch you create spans several commits, it will appear as a single set of changes when applied. You will lose both the knowledge of how the commits were broken up and also the messages for each commit. Let’s compare the commit history for both branches:
+
+On experimental, we had 3 commits, each with a meaningful commit message.
+
+$ git branch
+  * experimental
+    master
+$ git log --oneline
+  b36f227 third commit -- added file3
+  f39ebe8 second commit -- added file2
+  04a26e5 first commit -- committed file1
+However, our patch simply applied the actual changes to the master branch.
+
+$ git branch
+  experimental
+  * master
+$ git log --oneline
+  04a26e5 first commit -- committed file1
+Applying the patch did not commit the changes, nor did it bring any of the commit history associated with these changes with it. Be cautious of this when using patches in GIT.
