@@ -176,3 +176,80 @@ git log --pretty=format:"%ad " --date=short --author=james | sort -u | awk '{pri
 
 計算結果有33天
 任務完成
+
+[To create patch]
+在協同作業的時候，有時候會需要將別人的 commit 抓來自己的 branch,或者是將自己的 commit 打包給別人,此時就要用到 format-patch 這個好用的指令
+
+打包：
+git format-patch -n
+
+套用：
+git am xxx.patch
+
+舉例來說
+
+1.如果我們今天要打包最新的三個 commit 的話
+
+    git format-patch -3
+
+此時 git 便會幫你產生3個類似下列的檔案
+0001-First.patch
+0002-Second.patch
+0003-Third.patch
+
+2.那如果要套用別人的patch 也相當簡單
+
+    git am 0001-First.patch 
+
+就將 patch apply 上去了
+
+format-patch製作patch及git am匯入patch
+2017鐵人賽
+
+momo桑
+6 月前 1087 瀏覽
+製作patch
+可以透過git來產生patch檔給其他使用同一個版本庫的使用者
+
+patch產生的範圍有下面的方式可以設定
+
+git format-patch --root
+
+從root到指定commit的patch
+git format-patch -n
+
+最近n個commit的patch
+git format-patch 5e86795..f2b286a
+
+從指定起始commit到結束commit的patch
+-o 可以設定輸出的資料夾
+
+​$ git format-patch 5e86795..f2b286a -o /Users/morrishsu/Documents/20170103Patch
+/Users/morrishsu/Documents/20170103Patch/0001-modify-page.patch
+/Users/morrishsu/Documents/20170103Patch/0002-learn-git.patch
+/Users/morrishsu/Documents/20170103Patch/0003-modify-div.patch
+/Users/morrishsu/Documents/20170103Patch/0004-prepare.patch
+/Users/morrishsu/Documents/20170103Patch/0005-add-div-element.patch
+/Users/morrishsu/Documents/20170103Patch/0006-deBug.patch
+/Users/morrishsu/Documents/20170103Patch/0007-Bug-fixed.patch
+/Users/morrishsu/Documents/20170103Patch/0008-master-keep-going.patch
+/Users/morrishsu/Documents/20170103Patch/0009-commit-stash-data.patch
+/Users/morrishsu/Documents/20170103Patch/0010-Revert-Bug-fixed.patch
+可以發現他把commit都做成.patch檔案了
+
+匯入patch
+
+再下git am指令前記得要先下git am --abort
+
+git am --abort
+可以取消之前匯入失敗的結果
+
+可以整個資料夾匯入，它會根據檔名前面的數字的先後順序來匯入
+
+git am /Users/morrishsu/Documents/20170103Patch/*
+也可以一個一個patch匯入
+
+git am 0001-modify-page.patch
+patch過程遇到有衝突問題後，一樣要解決衝突之後再繼續進行git am
+
+直到完成patch
