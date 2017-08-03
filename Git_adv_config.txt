@@ -34,6 +34,9 @@ git config --global alias.last 'log -1 HEAD'
 git config --global alias.difflast 'diff --cached HEAD^'
 git config --global alias.ad '! git archive dev | tar -x -C'
 
+git config --global user.name "robert.lo"
+git config --global user.email "robert.lo@amtran.com.tw"
+
 [Reference]
 https://github.com/jesuswasrasta/GitEnvironment
 
