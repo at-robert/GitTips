@@ -113,6 +113,8 @@ https://github.com/at-robert/TestFolder.git
 https://github.com/at-robert/ASK_NodeJS.git
 https://github.com/at-robert/NodeJS_Uclass.git
 https://github.com/at-robert/AndroidCamExe.git
+https://github.com/at-robert/Arduino.git
+https://github.com/at-robert/AWS_Iot.git
 
 [BitBucket]
 https://at-robert@bitbucket.org/at-robert/swiss_knife.git
