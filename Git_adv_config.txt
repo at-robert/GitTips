@@ -40,8 +40,11 @@ git config --global user.email "robert.lo@amtran.com.tw"
 [Reference]
 https://github.com/jesuswasrasta/GitEnvironment
 
-
-
+[Advance Log show]
+git --no-pager log --decorate=short --pretty=oneline -n1
+git diff-tree --no-commit-id --name-only -r HEAD
+git diff-tree --name-only -r HEAD
+git log --since=2017-8-3
 
 [Linux] Git: push 出错的解决 master -> master (branch is currently checked out)
 
