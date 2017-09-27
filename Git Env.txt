@@ -115,6 +115,7 @@ https://github.com/at-robert/NodeJS_Uclass.git
 https://github.com/at-robert/AndroidCamExe.git
 https://github.com/at-robert/Arduino.git
 https://github.com/at-robert/AWS_Iot.git
+https://github.com/at-robert/NodeJS_Uclass2.git
 
 [BitBucket]
 https://at-robert@bitbucket.org/at-robert/swiss_knife.git
@@ -123,6 +124,7 @@ https://at-robert@bitbucket.org/at-robert/swiss_knife.git
 https://arditstock.herokuapp.com/ | https://git.heroku.com/arditstock.git
 https://datacollec.herokuapp.com/ | https://git.heroku.com/datacollec.git
 https://noderobjserver.herokuapp.com/ | https://git.heroku.com/noderobjserver.git
+https://nojstodo.herokuapp.com/ | https://git.heroku.com/nojstodo.git
 
 [Study and pratice]
 https://try.github.io/levels/1/challenges/1
