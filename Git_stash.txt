@@ -1,0 +1,27 @@
+Web link: http://ithelp.ithome.com.tw/articles/10136960
+
+* git stash
+* git stash -u
+
+* git stash 會將所有已列入追蹤(tracked)的檔案建立暫存版
+* git stash -u 會包括所有已追蹤或未追蹤的檔案，全部都建立成暫存版
+
+
+* git stash save
+* git stash save -u
+
+* git stash list
+
+* git stash pop
+暫存檔案取回，就可以透過 git stash pop 重新「合併」回來
+最後，它還會自動將這個 stash 分支給刪除
+
+* git stash apply
+* git stash pop "stash@{id}"
+
+
+* git stash apply "stash@{id}"
+* git stash drop "stash@{id}"
+
+* git stash clear
+如果想清理掉所有的暫存版，直接下達 git stash clear 即可全部刪除
