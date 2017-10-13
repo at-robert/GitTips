@@ -121,9 +121,15 @@ https://github.com/at-robert/NodeJS_Uclass2.git
 https://at-robert@bitbucket.org/at-robert/swiss_knife.git
 
 [heroku]
+[Python stock data vistualization]
 https://arditstock.herokuapp.com/ | https://git.heroku.com/arditstock.git
+
+[Python Data collecting APP]
 https://datacollec.herokuapp.com/ | https://git.heroku.com/datacollec.git
+
 https://noderobjserver.herokuapp.com/ | https://git.heroku.com/noderobjserver.git
+
+[NodeJS ToDo REST API]
 https://nojstodo.herokuapp.com/ | https://git.heroku.com/nojstodo.git
 
 [Study and pratice]
