@@ -116,6 +116,7 @@ https://github.com/at-robert/AndroidCamExe.git
 https://github.com/at-robert/Arduino.git
 https://github.com/at-robert/AWS_Iot.git
 https://github.com/at-robert/NodeJS_Uclass2.git
+https://github.com/at-robert/SocketC.git
 
 [BitBucket]
 https://at-robert@bitbucket.org/at-robert/swiss_knife.git
@@ -123,11 +124,21 @@ https://at-robert@bitbucket.org/at-robert/swiss_knife.git
 [MicroSoft]
 ssh://RobPriProj@robpriproj.visualstudio.com:22/_git/RobFirstProject
 ssh://RobPriProj@vs-ssh.visualstudio.com:22/_ssh/NodeJS_SocketIO_Proj
+ssh://RobPriProj@robpriproj.visualstudio.com:22/_git/GCP_tensorflow
+
+[MicroSoft Git repository]
+https://robpriproj.visualstudio.com/_projects
 
 [heroku]
+[Python stock data vistualization]
 https://arditstock.herokuapp.com/ | https://git.heroku.com/arditstock.git
+
+[Python Data collecting APP]
 https://datacollec.herokuapp.com/ | https://git.heroku.com/datacollec.git
+
 https://noderobjserver.herokuapp.com/ | https://git.heroku.com/noderobjserver.git
+
+[NodeJS ToDo REST API]
 https://nojstodo.herokuapp.com/ | https://git.heroku.com/nojstodo.git
 
 [Study and pratice]
