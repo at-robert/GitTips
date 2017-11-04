@@ -253,3 +253,11 @@ git am 0001-modify-page.patch
 patch過程遇到有衝突問題後，一樣要解決衝突之後再繼續進行git am
 
 直到完成patch
+
+
+* Revert
+
+$ git revert f9cd16ad6bb41e58a4d2fcc603468883fd91967d
+他就會產生一個revert 的類commit
+然後
+$git push到 server上去~

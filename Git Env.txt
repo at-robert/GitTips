@@ -122,6 +122,7 @@ https://at-robert@bitbucket.org/at-robert/swiss_knife.git
 
 [MicroSoft]
 ssh://RobPriProj@robpriproj.visualstudio.com:22/_git/RobFirstProject
+ssh://RobPriProj@vs-ssh.visualstudio.com:22/_ssh/NodeJS_SocketIO_Proj
 
 [heroku]
 https://arditstock.herokuapp.com/ | https://git.heroku.com/arditstock.git
