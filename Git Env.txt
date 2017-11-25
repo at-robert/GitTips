@@ -117,6 +117,7 @@ https://github.com/at-robert/Arduino.git
 https://github.com/at-robert/AWS_Iot.git
 https://github.com/at-robert/NodeJS_Uclass2.git
 https://github.com/at-robert/SocketC.git
+https://github.com/at-robert/userland.git
 
 [BitBucket]
 https://at-robert@bitbucket.org/at-robert/swiss_knife.git
@@ -125,6 +126,10 @@ https://at-robert@bitbucket.org/at-robert/swiss_knife.git
 ssh://RobPriProj@robpriproj.visualstudio.com:22/_git/RobFirstProject
 ssh://RobPriProj@vs-ssh.visualstudio.com:22/_ssh/NodeJS_SocketIO_Proj
 ssh://RobPriProj@robpriproj.visualstudio.com:22/_git/GCP_tensorflow
+ssh://RobPriProj@vs-ssh.visualstudio.com:22/_ssh/Taiwan_Stock
+
+[Google Cloud Platform]
+https://source.developers.google.com/p/aispeaker-172008/r/first_app
 
 [MicroSoft Git repository]
 https://robpriproj.visualstudio.com/_projects
