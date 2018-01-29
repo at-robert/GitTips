@@ -120,6 +120,8 @@ https://github.com/at-robert/SocketC.git
 https://github.com/at-robert/userland.git
 https://github.com/at-robert/ubidots_iot.git
 https://github.com/vpython/visual.git
+https://github.com/twolfson/sexy-bash-prompt.git
+https://github.com/at-robert/OftenUsed.git
 
 [BitBucket]
 https://at-robert@bitbucket.org/at-robert/swiss_knife.git
@@ -134,6 +136,7 @@ ssh://RobPriProj@vs-ssh.visualstudio.com:22/_ssh/ML_picture_classifier_Kmeans
 
 [Google Cloud Platform]
 https://source.developers.google.com/p/aispeaker-172008/r/first_app
+https://source.developers.google.com/p/aispeaker-172008/r/ML_pic_classifier_Kmeans
 
 [MicroSoft Git repository web page]
 https://robpriproj.visualstudio.com/_projects
