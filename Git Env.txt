@@ -120,6 +120,8 @@ https://github.com/at-robert/SocketC.git
 https://github.com/at-robert/userland.git
 https://github.com/at-robert/ubidots_iot.git
 https://github.com/vpython/visual.git
+https://github.com/twolfson/sexy-bash-prompt.git
+https://github.com/at-robert/OftenUsed.git
 
 [BitBucket]
 https://at-robert@bitbucket.org/at-robert/swiss_knife.git
