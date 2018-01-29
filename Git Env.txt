@@ -134,6 +134,7 @@ ssh://RobPriProj@vs-ssh.visualstudio.com:22/_ssh/ML_picture_classifier_Kmeans
 
 [Google Cloud Platform]
 https://source.developers.google.com/p/aispeaker-172008/r/first_app
+https://source.developers.google.com/p/aispeaker-172008/r/ML_pic_classifier_Kmeans
 
 [MicroSoft Git repository web page]
 https://robpriproj.visualstudio.com/_projects
